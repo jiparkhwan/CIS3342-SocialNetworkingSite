@@ -1,0 +1,36 @@
+﻿body {
+}
+
+.header {
+    background-color: #a41e35;
+    color: white;
+    height:125px;
+}
+
+h1{
+    font-size:50px;
+    font-weight:bold;
+}
+
+.register {
+    text-align:center;
+    font-size: 72px;
+}
+
+#tblDiv {
+    border: solid;
+    background: #a41e35;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    color:white;
+}
+
+#tblRegister {
+    font-size: 20px;
+}
+
+#tblRegister tr td {
+    font-size: 20px;
+    padding:5px;
+}
