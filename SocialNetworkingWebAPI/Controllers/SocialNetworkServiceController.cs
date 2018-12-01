@@ -13,8 +13,8 @@ namespace SocialNetworkingWebAPI.Controllers
     [ApiController]
     public class SocialNetworkServiceController : ControllerBase
     {
-        // GET api/SocialNetworkService/FindUserByName
-        [HttpGet("FindUserByName")]
+        // GET api/SocialNetworkService/FindUserByName/firstName/LastName
+        [HttpGet("FindUserByName/{firstName}/{lastName}")]
         public DataSet FindUserByName(string firstName, string lastName)
         {
             DBConnect objDB = new DBConnect();
@@ -26,8 +26,8 @@ namespace SocialNetworkingWebAPI.Controllers
             return objDB.GetDataSetUsingCmdObj(objCommand);
         }
 
-        // GET api/SocialNetworkService
-        [HttpGet]
+        // GET api/SocialNetworkService/FindUserByLocation
+        [HttpGet("FindUserByLocation/{city}/{state}")]
         public DataSet FindUserByLocation(string city, string state)
         {
             DBConnect objDB = new DBConnect();
@@ -36,6 +36,18 @@ namespace SocialNetworkingWebAPI.Controllers
             objCommand.CommandText = "TP_FindUserByLocation";
             objCommand.Parameters.AddWithValue("@city", city);
             objCommand.Parameters.AddWithValue("@state", state);
+            return objDB.GetDataSetUsingCmdObj(objCommand);
+        }
+
+        // GET api/SocialNetworkService/FindUserByOrganization
+        [HttpGet("FindUserByOrganization/{organization}/")]
+        public DataSet FindUserByOrganization(string organization)
+        {
+            DBConnect objDB = new DBConnect();
+            SqlCommand objCommand = new SqlCommand();
+            objCommand.CommandType = CommandType.StoredProcedure;
+            objCommand.CommandText = "TP_FindUserByOrganization ";
+            objCommand.Parameters.AddWithValue("@organization", organization);
             return objDB.GetDataSetUsingCmdObj(objCommand);
         }
     }
