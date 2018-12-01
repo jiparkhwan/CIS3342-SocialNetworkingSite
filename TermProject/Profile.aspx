@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="TermProject.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="TermProject.Profile" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Login Page</title>
+    <title>Account Registration</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -23,30 +23,32 @@
             </div>
             <div class="col-md-6">
                 <br />
-                <h1>OwlSpace</h1>
+                <h1><a href="Default.aspx" style="color:white; font-style:normal;">OwlSpace</a></h1>
             </div>
             <div class="col-md-5">
                 <br />
                 <br />
                 <br />
-                Email:
-                <asp:TextBox ID="txtLoginEmail" runat="server" CssClass="btn"></asp:TextBox>
-                Password:
-                <asp:TextBox ID="txtLoginPassword" runat="server" CssClass="btn"></asp:TextBox>
-                <asp:Button ID="btnLogin" Text="Login" runat="server" CssClass="btn btn-danger" />
-                <asp:Button ID="btnLoginForget" Text="Forgot Password" runat="server" CssClass="btn btn-danger" />
+                <asp:Button ID="btnHome" Text="Home" runat="server" CssClass="btn btn-danger" OnClick="btnHome_Click" />
+                <asp:Button ID="btnLogout" Text="Logout" runat="server" CssClass="btn btn-danger" OnClick="btnLogout_Click" />
+                <asp:ImageButton ID="btnSettings" AlternateText="Settings" runat="server" CssClass="btn btn-danger" OnClick="btnSettings_Click" />
             </div>
         </div>
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4 register">
+            <div class="col-md-4">
                 <br />
                 <br />
-             Sign up for OwlSpace! <br />
-                <asp:Button ID="btnRegister" Text="Sign Up" runat="server"  CssClass="btn btn-danger"/>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                Login successful.
+                </div>
             </div>
-            <div class="col-md-4"></div>
-        </div>
     </form>
 </body>
 </html>
+

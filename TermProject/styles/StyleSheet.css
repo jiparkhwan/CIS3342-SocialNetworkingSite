@@ -1,36 +1,112 @@
 ﻿body {
+    background-image: url(../images/background.png) !important;
+    background: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    color: black;
+
 }
 
 .header {
     background-color: #a41e35;
     color: white;
-    height:125px;
+    height: 125px;
 }
 
-h1{
-    font-size:50px;
-    font-weight:bold;
+h1 {
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .register {
-    text-align:center;
+    text-align: center;
     font-size: 72px;
+    color: white;
 }
 
-#tblDiv {
+#tblRegisterDiv {
     border: solid;
     background: #a41e35;
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 10px;
-    color:white;
+    color: white;
+}
+
+.ddl{
+    color: black;
 }
 
 #tblRegister {
     font-size: 20px;
 }
 
-#tblRegister tr td {
-    font-size: 20px;
-    padding:5px;
+    #tblRegister tr td {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+#tblForgotPasswordDiv {
+    border: solid;
+    background: #a41e35;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    color: white;
 }
+
+#tblForgotPassword {
+    font-size: 20px;
+    color: white;
+}
+
+    #tblForgotPassword tr td {
+        font-size: 20px;
+        padding: 5px;
+        color: white;
+    }
+
+#tblPrivacyDiv {
+    border: solid;
+    background: #a41e35;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+#tblPrivacy {
+    font-size: 20px;
+    color: white;
+}
+
+    #tblPrivacy tr td {
+        font-size: 20px;
+        padding: 5px;
+        color: white;
+    }
+
+
+.txtbtn {
+    color: black;
+}
+
+#tblPreferenceDiv {
+    border: solid;
+    background: #a41e35;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+#tblPreference {
+    font-size: 20px;
+    color: white;
+}
+
+    #tblPreference tr td {
+        font-size: 20px;
+        padding: 5px;
+        color: white;
+    }
