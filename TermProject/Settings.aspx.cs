@@ -38,11 +38,18 @@ namespace TermProject
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            //Delete cookies
-            HttpCookie myCookie = Request.Cookies["Login"];
-            myCookie.Expires = DateTime.Now.AddDays(-1d);
-            Response.Cookies.Add(myCookie);
-            Response.Redirect("Default.aspx");
+            if (Session["RememberMe"] != null)
+            {
+                //Delete cookies
+                HttpCookie myCookie = Request.Cookies["Login"];
+                myCookie.Expires = DateTime.Now.AddDays(-1d);
+                Response.Cookies.Add(myCookie);
+                Response.Redirect("Default.aspx");
+            }
+            else
+            {
+                Response.Redirect("Default.aspx");
+            }
         }
     }
 }

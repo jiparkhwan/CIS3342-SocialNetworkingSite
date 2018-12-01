@@ -13,7 +13,29 @@ namespace TermProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack) { 
+            if (Request.Cookies["Login"] != null)
+            {
+                HttpCookie myCookie = Request.Cookies["Login"];
+                DBConnect objDB = new DBConnect();
+                SqlCommand objCommand = new SqlCommand();
+                objCommand.CommandType = CommandType.StoredProcedure;
+                objCommand.CommandText = "TP_CheckAutoSignIn";
+                objCommand.Parameters.AddWithValue("@email", myCookie["Email"]);
+                DataSet ds = objDB.GetDataSetUsingCmdObj(objCommand);
+                if (Convert.ToInt32(ds.Tables[0].Rows[0]["AutoSignIn"].ToString()) == 1)
+                {
+                    Session.Add("Email", txtLoginEmail.Text);
+                    Session.Add("RememberMe", true);
+                    Response.Redirect("Profile.aspx");
+                }
+                else
+                {
+                    txtLoginEmail.Text = myCookie["Email"];
+                    txtLoginPassword.Text = myCookie["Password"];
+                }
+            }
+        }
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
@@ -37,6 +59,7 @@ namespace TermProject
                     if (chkRememberMe.Checked)
                     {
                         Session.Add("Email", txtLoginEmail.Text);
+                        Session.Add("RememberMe", true);
                         HttpCookie myCookie = new HttpCookie("Login");
                         myCookie.Values["Email"] = txtLoginEmail.Text;
                         myCookie.Values["Password"] = txtLoginPassword.Text;
