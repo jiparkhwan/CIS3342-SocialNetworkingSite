@@ -10,7 +10,7 @@
 namespace TermProject {
     
     
-    public partial class Profile {
+    public partial class FindFriends {
         
         /// <summary>
         /// form1 control.
@@ -56,5 +56,14 @@ namespace TermProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnSettings;
+        
+        /// <summary>
+        /// gvFriendRequests control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvFriendRequests;
     }
 }

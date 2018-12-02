@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="TermProject.Profile" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FindFriends.aspx.cs" Inherits="TermProject.FindFriends" %>
 
 <!DOCTYPE html>
 
@@ -36,20 +36,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                Login successful.
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <asp:GridView ID="gvFriendRequests" runat="server" AutoGenerateColumns="false">
+
+                </asp:GridView>
                 </div>
             </div>
     </form>
 </body>
 </html>
-
