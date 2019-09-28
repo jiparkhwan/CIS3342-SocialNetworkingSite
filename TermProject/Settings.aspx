@@ -1,20 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Settings.aspx.cs" Inherits="TermProject.Settings" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Account Registration</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <link href="styles/StyleSheet.css" rel="stylesheet" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link href="styles/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -29,9 +24,13 @@
                 <br />
                 <br />
                 <br />
-                <asp:Button ID="btnHome" Text="Home" runat="server" CssClass="btn btn-danger" />
+                <asp:Button ID="btnProfile" Text="Profile" runat="server" CssClass="btn btn-danger" OnClick="btnProfile_Click" />
+                <asp:Button ID="btnHome" Text="Home" runat="server" CssClass="btn btn-danger" OnClick="btnHome_Click" />
+                <asp:Button ID="btnFindFriends" Text="Find Friends" runat="server" CssClass="btn btn-danger" OnClick="btnFindFriends_Click" />
+                <asp:Button ID="btnMessenger" Text="Messenger" runat="server" CssClass="btn btn-danger" OnClick="btnMessenger_Click" />
+                <asp:Button ID="btnEditProfile" Text="Edit Profile" runat="server" CssClass="btn btn-danger" OnClick="btnEditProfile_Click" />
                 <asp:Button ID="btnLogout" Text="Logout" runat="server" CssClass="btn btn-danger" OnClick="btnLogout_Click" />
-                <asp:ImageButton ID="btnSettings" AlternateText="Settings" runat="server" CssClass="btn btn-danger" />
+                 <asp:ImageButton ID="btnSettings" ImageUrl="~/images/settings.png" Width="45" Height="34" AlternateText="Settings" runat="server" CssClass="btn btn-danger" OnClick="btnSettings_Click" />
             </div>
         </div>
         <div class="row">
@@ -59,9 +58,9 @@
                             </asp:TableCell>
                             <asp:TableCell>
                                 <asp:DropDownList ID="ddlColorStyle" runat="server" Style="color: black;">
-                                    <asp:ListItem>Normal</asp:ListItem>
-                                    <asp:ListItem>Colorblind</asp:ListItem>
-                                    <asp:ListItem>Nightmode</asp:ListItem>
+                                    <asp:ListItem Value="Normal">Normal</asp:ListItem>
+                                    <asp:ListItem Value="Colorblind">Colorblind</asp:ListItem>
+                                    <asp:ListItem Value="Nightmode">Nightmode</asp:ListItem>
                                 </asp:DropDownList>
                             </asp:TableCell>
                         </asp:TableRow>
@@ -81,9 +80,8 @@
                             </asp:TableCell>
                             <asp:TableCell>
                                 <asp:DropDownList ID="ddlProfileView" runat="server" Style="color: black;">
-                                    <asp:ListItem>Everyone</asp:ListItem>
-                                    <asp:ListItem>Friends</asp:ListItem>
-                                    <asp:ListItem>Friends of friends</asp:ListItem>
+                                    <asp:ListItem Value="Everyone">Everyone</asp:ListItem>
+                                    <asp:ListItem Value="Friends">Friends</asp:ListItem>
                                 </asp:DropDownList>
                             </asp:TableCell>
                         </asp:TableRow>

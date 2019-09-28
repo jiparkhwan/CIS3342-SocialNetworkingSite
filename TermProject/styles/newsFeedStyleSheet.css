@@ -1,0 +1,35 @@
+﻿body {
+    background-image: url(../images/background.png) !important;
+    background: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    color: white;
+}
+
+.header {
+    background-color: #a41e35;
+    color: white;
+    height: 125px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.ddl {
+    color: black;
+}
+
+.txtbtn {
+    color: black;
+}
+
+#previousPostColumn {
+    margin-top: 10px;
+    background-color: #a41e35;
+    border-radius: 10px;
+    border: solid;
+    border-color: white;
+}
+

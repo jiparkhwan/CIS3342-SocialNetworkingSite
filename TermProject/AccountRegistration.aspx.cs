@@ -5,22 +5,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using SocialNetworkingClassLibrary;
-
-namespace TermProject
+ namespace TermProject
 {
     public partial class AccountRegistration : System.Web.UI.Page
     {
         StoredProcedures procedures = new StoredProcedures();
-
-        protected void Page_Load(object sender, EventArgs e)
+         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void btnSubmit_Click(object sender, EventArgs e)
+         }
+         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-
-            bool flag = true;
+             bool flag = true;
             string email = "";
             string firstName = "";
             string lastName = "";
@@ -37,9 +32,7 @@ namespace TermProject
             string question3 = ddlSecurityQuestion3.SelectedValue;
             string answer3 = "";
             lblMessage.Text = "";
-
-
-            if (String.IsNullOrWhiteSpace(txtRegisterEmail.Text))
+             if (String.IsNullOrWhiteSpace(txtRegisterEmail.Text))
             {
                 lblMessage.Text += "Please fill out your e-mail address. </br>";
                 flag = false;
@@ -70,8 +63,7 @@ namespace TermProject
             {
                 firstName = txtRegisterFirstName.Text;
             }
-
-            if (String.IsNullOrWhiteSpace(txtRegisterLastName.Text))
+             if (String.IsNullOrWhiteSpace(txtRegisterLastName.Text))
             {
                 lblMessage.Text += "Please fill out your last name. </br>";
                 flag = false;
@@ -85,19 +77,16 @@ namespace TermProject
             {
                 lastName = txtRegisterLastName.Text;
             }
-
-            if (String.IsNullOrWhiteSpace(txtRegisterAddress.Text))
+             if (String.IsNullOrWhiteSpace(txtRegisterAddress.Text))
             {
                 lblMessage.Text += "Please fill out your address. </br>";
                 flag = false;
             }
-
-            else
+             else
             {
                 address += txtRegisterAddress.Text;
             }
-
-            if (String.IsNullOrWhiteSpace(txtRegisterCity.Text))
+             if (String.IsNullOrWhiteSpace(txtRegisterCity.Text))
             {
                 lblMessage.Text += "Please fill out your city. </br>";
                 flag = false;
@@ -106,8 +95,7 @@ namespace TermProject
             {
                 city = txtRegisterCity.Text;
             }
-
-            if (String.IsNullOrWhiteSpace(txtRegisterState.Text))
+             if (String.IsNullOrWhiteSpace(txtRegisterState.Text))
             {
                 lblMessage.Text += "Please fill out your state. </br>";
                 flag = false;
@@ -121,8 +109,7 @@ namespace TermProject
             {
                 state = txtRegisterState.Text;
             }
-
-            if (String.IsNullOrWhiteSpace(txtRegisterZipCode.Text))
+             if (String.IsNullOrWhiteSpace(txtRegisterZipCode.Text))
             {
                 lblMessage.Text += "Please fill out your zip code. </br>";
                 flag = false;
@@ -141,8 +128,7 @@ namespace TermProject
             {
                 zip = txtRegisterZipCode.Text;
             }
-
-            if (String.IsNullOrWhiteSpace(txtRegisterPhoneNumber.Text))
+             if (String.IsNullOrWhiteSpace(txtRegisterPhoneNumber.Text))
             {
                 lblMessage.Text += "Please fill out your phone number. </br>";
                 flag = false;
@@ -161,8 +147,7 @@ namespace TermProject
             {
                 phoneNumber = txtRegisterPhoneNumber.Text;
             }
-
-            //Security Question validations
+             //Security Question validations
             if (String.IsNullOrWhiteSpace(txtSecurityAnswer1.Text))
             {
                 lblMessage.Text += "Please fill out the first security question. </br>";
@@ -190,20 +175,24 @@ namespace TermProject
             {
                 answer3 = txtSecurityAnswer3.Text;
             }
-
-            if (flag == true)
+             if (flag == true)
             {
                 if (procedures.AddUser(email, firstName, lastName, phoneNumber, address, city, state, zip, password) && procedures.AddSecurityQuestions(email, question1, answer1, question2, answer2, question3, answer3) == true)
                 {
                     lblMessage.Text += "New user added to OwlSpace! Hit OwlSpace on the top left to return home! </br>";
                     procedures.AddPreference(email);
+                    Preferences serialPreferences = new Preferences();
+                    serialPreferences.Email = email;
+                    serialPreferences.AutoSignIn = 1;
+                    serialPreferences.Privacy = "Everyone";
+                    serialPreferences.Theme = "Normal";
+                    procedures.AddSerialPreference(serialPreferences);
                 }
                 else
                 {
                     lblMessage.Text += "There was an error creating new user. </br>";
                 }
-
-            }
+             }
         }
     }
 }

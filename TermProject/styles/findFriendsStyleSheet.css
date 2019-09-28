@@ -1,0 +1,54 @@
+﻿body {
+    background-image: url(../images/background.png) !important;
+    background: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    color: white;
+}
+
+.header {
+    background-color: #a41e35;
+    color: white;
+    height: 125px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.ddl {
+    color: black;
+}
+
+.txtbtn {
+    color: black;
+}
+
+#findFriendDiv {
+    border: solid;
+    border-color: white;
+    background-color: #a41e35;
+    color:black;
+}
+
+#updpnlFriendRequested {
+    border: solid;
+    border-color: white;
+    background-color: #a41e35;
+    color: black;
+}
+
+#updpnlFriendRequests {
+    border: solid;
+    border-color: white;
+    background-color: #a41e35;
+    color: black;
+}
+
+#updpnlPeopleYouMayKnow {
+    border: solid;
+    border-color: white;
+    background-color: #a41e35;
+    color: black;
+}

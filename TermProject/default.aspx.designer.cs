@@ -6,13 +6,9 @@
 //     the code is regenerated. 
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-namespace TermProject {
-    
-    
-    public partial class Index {
-        
-        /// <summary>
+ namespace TermProject {
+     public partial class Index {
+         /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -20,8 +16,7 @@ namespace TermProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
+         /// <summary>
         /// txtLoginEmail control.
         /// </summary>
         /// <remarks>
@@ -29,8 +24,7 @@ namespace TermProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLoginEmail;
-        
-        /// <summary>
+         /// <summary>
         /// txtLoginPassword control.
         /// </summary>
         /// <remarks>
@@ -38,8 +32,7 @@ namespace TermProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLoginPassword;
-        
-        /// <summary>
+         /// <summary>
         /// btnLogin control.
         /// </summary>
         /// <remarks>
@@ -47,8 +40,7 @@ namespace TermProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
-        
-        /// <summary>
+         /// <summary>
         /// chkRememberMe control.
         /// </summary>
         /// <remarks>
@@ -56,8 +48,7 @@ namespace TermProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkRememberMe;
-        
-        /// <summary>
+         /// <summary>
         /// btnRegister control.
         /// </summary>
         /// <remarks>

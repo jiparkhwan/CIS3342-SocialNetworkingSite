@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Util
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkingClassLibrary", "SocialNetworkingClassLibrary\SocialNetworkingClassLibrary.csproj", "{2F93FA44-2AF1-44DE-A872-B5EF80DC696A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkingWebAPI", "SocialNetworkingWebAPI\SocialNetworkingWebAPI.csproj", "{3247C3DA-FC33-4AE7-81EF-27D2998A411B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkingWebAPI", "SocialNetworkingWebAPI\SocialNetworkingWebAPI.csproj", "{7D67B67D-1E2A-4EB3-95D9-B2ECCC46CB8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{2F93FA44-2AF1-44DE-A872-B5EF80DC696A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F93FA44-2AF1-44DE-A872-B5EF80DC696A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F93FA44-2AF1-44DE-A872-B5EF80DC696A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3247C3DA-FC33-4AE7-81EF-27D2998A411B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3247C3DA-FC33-4AE7-81EF-27D2998A411B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3247C3DA-FC33-4AE7-81EF-27D2998A411B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3247C3DA-FC33-4AE7-81EF-27D2998A411B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D67B67D-1E2A-4EB3-95D9-B2ECCC46CB8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D67B67D-1E2A-4EB3-95D9-B2ECCC46CB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D67B67D-1E2A-4EB3-95D9-B2ECCC46CB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D67B67D-1E2A-4EB3-95D9-B2ECCC46CB8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

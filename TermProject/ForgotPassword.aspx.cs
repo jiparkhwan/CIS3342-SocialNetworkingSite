@@ -7,18 +7,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using SocialNetworkingClassLibrary;
-
-namespace TermProject
+ namespace TermProject
 {
     public partial class ForgotPassword : System.Web.UI.Page
     {
         StoredProcedures procedures = new StoredProcedures();
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void btnSubmit_Click(object sender, EventArgs e)
+         }
+         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             DataSet ds = procedures.GetSecurityQuestions(txtEmailAddress.Text);
             try
@@ -32,8 +29,7 @@ namespace TermProject
                 lblMessage.Text = "Invalid e-mail";
             }
         }
-
-        protected void btnSubmitAnswer_Click(object sender, EventArgs e)
+         protected void btnSubmitAnswer_Click(object sender, EventArgs e)
         {
             DataSet ds = procedures.GetSecurityQuestions(txtEmailAddress.Text);
             try

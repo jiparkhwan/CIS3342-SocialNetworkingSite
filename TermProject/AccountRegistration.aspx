@@ -1,20 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AccountRegistration.aspx.cs" Inherits="TermProject.AccountRegistration" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Account Registration</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <link href="styles/StyleSheet.css" rel="stylesheet" />
+     <link href="styles/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -54,14 +49,6 @@
                             </asp:TableCell>
                             <asp:TableCell>
                                 <asp:TextBox ID="txtRegisterPassword" runat="server" CssClass="txtbtn"></asp:TextBox>
-                            </asp:TableCell>
-                        </asp:TableRow>
-                        <asp:TableRow>
-                            <asp:TableCell>
-                            Username:
-                            </asp:TableCell>
-                            <asp:TableCell>
-                                <asp:TextBox ID="txtRegisterUsername" runat="server" CssClass="txtbtn"></asp:TextBox>
                             </asp:TableCell>
                         </asp:TableRow>
                         <asp:TableRow>
@@ -188,7 +175,7 @@
                         </asp:TableRow>
                     </asp:Table>
                     <br />
-                    <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" ForeColor="Black"  />
+                    <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" ForeColor="Black" />
                     <br />
                     <asp:Label ID="lblMessage" runat="server"></asp:Label>
                 </div>
